@@ -35,13 +35,13 @@ const Signin = () => {
       <input
         type="email"
         placeholder="Email..."
-        className="p-2 w-[90%] md:w-[30%] text-black "
+        className="p-2 w-[90%] md:w-[30%] text-black rounded "
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
         placeholder="Password..."
-        className="p-2 w-[90%] md:w-[30%] text-black "
+        className="p-2 w-[90%] md:w-[30%] text-black rounded "
         onChange={(e) => setPassword(e.target.value)}
       />
       <p>
@@ -51,7 +51,7 @@ const Signin = () => {
         </Link>{" "}
       </p>
       <button
-        className=" bg-green-700 px-4 py-2 w-[90%] md:w-[30%]"
+        className=" bg-green-700 px-4 py-2 w-[90%] md:w-[30%] rounded"
         onClick={signIn}
       >
         Sign In With Email

@@ -30,7 +30,10 @@ const Signout = () => {
         until you log in again. Have a great day!
       </p>
 
-      <button className=" bg-green-700 px-4 py-2 w-full" onClick={logOut}>
+      <button
+        className=" bg-green-700 px-4 py-2 w-full rounded"
+        onClick={logOut}
+      >
         Logout
       </button>
     </div>
