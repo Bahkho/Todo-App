@@ -1,5 +1,5 @@
 ## Task to finish in the app
 
-- Authentication
-- Users should view only their todos
-- Hide api keys from public
+- Allow users to only view their own data from firebase
+- Hide api key from public
+- Using of strong password to sign up
