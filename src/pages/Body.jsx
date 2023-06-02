@@ -39,9 +39,12 @@ const Body = () => {
     const collectionRef = collection(database, "todos");
     const q = query(collectionRef);
     const unSubscribe = onSnapshot(q, (querySnapshot) => {
-      var todosArr = [];
+      const todosArr = [];
       querySnapshot.forEach((doc) => {
-        todosArr.push({ ...doc.data(), id: doc.id });
+        const data = { ...doc.data(), id: doc.id };
+        if (data.userId === auth?.currentUser?.uid) {
+          todosArr.push(data);
+        }
       });
       setTodos(todosArr);
     });
