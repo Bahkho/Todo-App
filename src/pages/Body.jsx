@@ -29,7 +29,7 @@ const Body = () => {
     await addDoc(collectionRef, {
       completed: false,
       text: addTodo,
-      // userId: auth?.currentUser?.uid,
+      userId: auth?.currentUser?.uid,
     });
     setAddTodo("");
   };
