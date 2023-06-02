@@ -33,39 +33,46 @@ const Signup = () => {
 
   //-----------------------------------------------------------------------------------------
   return (
-    <div className="flex flex-col gap-8 justify-center items-center text-white mt-8 max-w-[1280px] mx-auto">
-      <h1 className="font-bold">Sign Up</h1>
-      {error && <p className="text-red-500">{error}</p>}
-      <input
-        type="email"
-        placeholder="Email..."
-        className="p-2 w-[90%] md:w-[30%] text-black rounded"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password..."
-        className="p-2 w-[90%] md:w-[30%] text-black rounded"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+    <div className="flex justify-center items-center h-screen">
+      <div className="w-full">
+        <div className="flex flex-col gap-8 justify-center items-center text-white max-w-[1280px] mx-auto">
+          <h1 className="font-bold">Sign Up</h1>
+          {error && <p className="text-red-500">{error}</p>}
+          <input
+            type="email"
+            placeholder="Email..."
+            className="p-2 w-[90%] md:w-[30%] text-black rounded"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password..."
+            className="p-2 w-[90%] md:w-[30%] text-black rounded"
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-      <div className="flex flex-col w-[90%] gap-2 md:flex-row justify-between md:w-[30%]">
-        <button className=" bg-green-700 px-4 py-2 rounded " onClick={signUp}>
-          Sign Up With Your Email
-        </button>
-        <button
-          className=" bg-green-700 px-4 py-2 rounded"
-          onClick={signInWithGoogle}
-        >
-          Sign In With Goggle
-        </button>
+          <div className="flex flex-col w-[90%] gap-2 md:flex-row justify-between md:w-[30%]">
+            <button
+              className=" bg-green-700 px-4 py-2 rounded text-sm"
+              onClick={signUp}
+            >
+              Sign Up With Your Email
+            </button>
+            <button
+              className=" bg-green-700 px-4 py-2 rounded text-sm"
+              onClick={signInWithGoogle}
+            >
+              Sign In With Goggle
+            </button>
+          </div>
+          <p>
+            Already have an account?{" "}
+            <Link to="/login" className="text-black">
+              Sign in
+            </Link>{" "}
+          </p>
+        </div>
       </div>
-      <p>
-        Already have an account?{" "}
-        <Link to="/login" className="text-black">
-          Sign in
-        </Link>{" "}
-      </p>
     </div>
   );
 };

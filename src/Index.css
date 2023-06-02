@@ -9,8 +9,8 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  /* width: 100vw; */
   background: linear-gradient(to right, #15803d, #86efac);
-  padding: 1rem;
+  /* padding: 1rem; */
 }
