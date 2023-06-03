@@ -74,7 +74,7 @@ const Body = () => {
   return (
     <>
       <div className="flex justify-center items-center h-screen">
-        <div className="w-full">
+        <div className="w-full px-4">
           <div className="max-w-[640px] bg-slate-100 rounded-md w-full shadow-xl mx-auto p-4">
             <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">
               To Do App
