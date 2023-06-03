@@ -62,7 +62,7 @@ const Signup = () => {
               className=" bg-green-700 px-4 py-2 rounded text-sm"
               onClick={signInWithGoogle}
             >
-              Sign In With Goggle
+              Sign In With Google
             </button>
           </div>
           <p>
