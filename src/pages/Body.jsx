@@ -52,12 +52,19 @@ const Body = () => {
     return unSubscribe;
   }, []);
   //-----------------------------------------------------------------------------------------
-  //Update todo from firebase
+  //Update todo if completed or not
   const toogleComplete = async (todo) => {
     const docRef = doc(database, "todos", todo.id);
     await updateDoc(docRef, {
       completed: !todo.completed,
-      // userId: auth?.currentUser?.uid,
+    });
+  };
+  //-----------------------------------------------------------------------------------------
+  //Update todo from firebase
+  const updateTodo = async (todo, input) => {
+    const docRef = doc(database, "todos", todo.id);
+    await updateDoc(docRef, {
+      text: input,
     });
   };
   //-----------------------------------------------------------------------------------------
@@ -87,7 +94,7 @@ const Body = () => {
                 placeholder="Add Todo"
                 className="border p-2 w-full text-xl text-black"
               />
-              <button className="border p-4 ml-2 bg-green-700 text-slate-100">
+              <button className="border p-4 ml-2 bg-green-700 text-white">
                 {<AiOutlinePlus />}
               </button>
             </form>
@@ -97,6 +104,7 @@ const Body = () => {
                   todo={todo}
                   toogleComplete={toogleComplete}
                   deleteTodo={deleteTodo}
+                  updateTodo={updateTodo}
                   key={index}
                 />
               ))}
