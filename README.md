@@ -1,4 +1,4 @@
-## Task to finish in the app
+## Task to finish in this project
 
 - Hide api key from public
 - Cross-Origin-Opener-Policy policy would block the window.closed call. popup.ts:285
